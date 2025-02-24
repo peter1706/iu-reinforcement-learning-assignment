@@ -1,0 +1,18 @@
+atari:
+  env_wrapper:
+    - stable_baselines3.common.atari_wrappers.AtariWrapper
+  frame_stack: 4
+  policy: 'CnnPolicy'
+  n_envs: 8
+  n_steps: 1024
+  n_epochs: 3
+  batch_size: 32
+  n_timesteps: !!float 5e6
+  learning_rate: lin_1.14e-4
+  clip_range: lin_0.3
+  vf_coef: 0.62
+  ent_coef: 0.0015
+  gae_lambda: 0.95
+  gamma: 0.98
+  max_grad_norm: 0.3
+  policy_kwargs: "dict(net_arch=dict(pi=[64],vf=[64, 64]), activation_fn=nn.Tanh, ortho_init=False)"

@@ -1,0 +1,33 @@
+!!python/object/apply:collections.OrderedDict
+- - - batch_size
+    - 8
+  - - clip_range
+    - lin_0.25
+  - - ent_coef
+    - 5.37e-08
+  - - env_wrapper
+    - - stable_baselines3.common.atari_wrappers.AtariWrapper
+  - - frame_stack
+    - 4
+  - - gae_lambda
+    - 0.85
+  - - gamma
+    - 0.95
+  - - learning_rate
+    - lin_1.36e-5
+  - - max_grad_norm
+    - 0.5
+  - - n_envs
+    - 8
+  - - n_epochs
+    - 20
+  - - n_steps
+    - 256
+  - - n_timesteps
+    - 5000000.0
+  - - policy
+    - CnnPolicy
+  - - policy_kwargs
+    - dict(net_arch=dict(pi=[64],vf=[64, 64]), activation_fn=nn.ELU, ortho_init=True)
+  - - vf_coef
+    - 0.54
